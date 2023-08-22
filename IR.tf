@@ -13,7 +13,8 @@ resource "aws_apprunner_service" "example" {
   }
 
   tags = {
-    Name = "example-apprunner-service"
+    Name  = "example-apprunner-service"
+    test1 = "test1"
   }
 }
 resource "aws_batch_job_definition" "test" {
@@ -53,6 +54,9 @@ resource "aws_batch_job_definition" "test" {
     ]
 }
 CONTAINER_PROPERTIES
+  tags = {
+    test1 = "test1"
+  }
 }
 resource "aws_codebuild_project" "alias" {
   name           = "test-project-cache"
@@ -86,6 +90,7 @@ resource "aws_codebuild_project" "alias" {
 
   tags = {
     Environment = "Test"
+    test1       = "test1"
   }
 }
 
@@ -121,6 +126,7 @@ resource "aws_codebuild_project" "image" {
 
   tags = {
     Environment = "Test"
+    test1       = "test1"
   }
 }
 
@@ -139,6 +145,9 @@ resource "aws_iam_role" "example" {
       }
     }]
   })
+  tags = {
+    test1 = "test1"
+  }
 }
 resource "aws_ecs_task_definition" "service" {
   family = "service"
@@ -170,6 +179,9 @@ resource "aws_ecs_task_definition" "service" {
       ]
     }
   ])
+  tags = {
+    test1 = "test1"
+  }
 }
 resource "aws_lightsail_container_service" "example" {
   name        = "example"
