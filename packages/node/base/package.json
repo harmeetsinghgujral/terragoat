@@ -137,7 +137,7 @@
     "requirejs": "^2.3.6",
     "rollup": "~2.59.0",
     "rollup-plugin-preserve-shebang": "^1.0.1",
-    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-sourcemaps": "^0.2.0",
     "rxjs": "^6.6.7",
     "selenium-webdriver": "3.5.0",
     "shelljs": "^0.8.4",
